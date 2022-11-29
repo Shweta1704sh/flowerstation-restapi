@@ -57,6 +57,14 @@ app.get('/OrderDetails',(req,res)=>{
     })
 })
 
+//placeorder
+app.post('/placeOrder',(req,res) => {
+    db.collection('order').insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.send('Order Placed')
+    })
+})
+
 //payment Details
 app.get('/PaymentDetails',(req,res)=>{
     db.collection('payment').find().toArray((err, result)=>{

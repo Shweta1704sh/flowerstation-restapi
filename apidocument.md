@@ -52,3 +52,5 @@ http://localhost:9800/PaymentDetails
 >Deliver details
 http://localhost:9800/DeliveryDetails
 
+>place Orders
+http://localhost:9800/placeOrder
