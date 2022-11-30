@@ -51,6 +51,13 @@ app.get('/ProductDetails',(req,res)=>{
 
 //order Details
 app.get('/OrderDetails',(req,res)=>{
+    let user_id = Number(req.query.user_id);
+    let query = {}
+    if(user_id){
+        query={user_id:user_id}
+    }else{
+        query={}
+    }
     db.collection('order').find().toArray((err, result)=>{
         if (err) throw err;
         res.send(result)

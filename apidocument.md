@@ -44,6 +44,8 @@ http://localhost:9800/user
 >Order Details
 http://localhost:9800/OrderDetails
 
+>order Details wrt user id
+http://localhost:9800/orders?user_id-2
 
 >Payment details
 http://localhost:9800/PaymentDetails
