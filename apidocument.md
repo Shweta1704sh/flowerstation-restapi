@@ -1,28 +1,29 @@
 >Live api
-https://flowerstation-restapi.onrender.com
+https://flower-restapi.onrender.com
 
 >live api with routes
 
 User Details
-https://flowerstation-restapi.onrender.com/user
+https://flower-restapi.onrender.com/user
 
 Products Details
-https://flowerstation-restapi.onrender.com/ProductDetails
+https://flower-restapi.onrender.com/ProductDetails
 
 Product WRT Product Category
-https://flowerstation-restapi.onrender.com/ProductDetails/?CategoryId=2
+https://flower-restapi.onrender.com/ProductDetails/?CategoryId=2
 
 Category Detail
-https://flowerstation-restapi.onrender.com/category
+https://flower-restapi.onrender.com/category
 
 Order Details
-https://flowerstation-restapi.onrender.com/OrderDetails
+https://flower-restapi.onrender.com/OrderDetails
 
 Payment Details
-https://flowerstation-restapi.onrender.com/PaymentDetails
+https://flower-restapi.onrender.com/PaymentDetails
+
 
 Deliver details
-https://flowerstation-restapi.onrender.com/DeliveryDetails
+https://flower-restapi.onrender.com/DeliveryDetails
 
 Local APi
 
@@ -34,7 +35,7 @@ http://localhost:9800/ProductDetails
 http://localhost:9800/ProductDetails/?CategoryId=2
 
 >Details of category
-http://localhost:9800/
+http://localhost:9800/category
 
 
 >List of users
@@ -54,5 +55,29 @@ http://localhost:9800/PaymentDetails
 >Deliver details
 http://localhost:9800/DeliveryDetails
 
+>delete order
+http://localhost:9800/deleteOrder/637e10cbcb7768bd03f40476
+
 >place Orders
 http://localhost:9800/placeOrder
+body 
+{
+    "o_id":6,
+    "date_of_order":"21/10/2022",
+    "time_of_order":"01:00PM",
+    "place_of_delivery":"Shahdara",
+    "City_of_delivery":"Delhi",
+    "Country_of_delivery":"India",
+    "product":
+    {
+        "p_id":2
+    },
+    "Quantity":1,
+    "product_price":"Rs. 824/-",
+    "user":
+    {
+        "user_id" : 2,
+        "user_name" : "Smriti Verma",
+        "phone_no" : "9911586290"
+    }
+}

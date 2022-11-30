@@ -88,6 +88,33 @@ app.get('/DeliveryDetails',(req,res)=>{
     })
 })
 
+//updateOrder
+app.put('/updateOrder/:id',(req,res) => {
+    let oid = Number(req.params.id);
+    db.collection('order').updateOne(
+        {order_id:oid},
+        {
+            $set:{
+                "status":req.body.status,
+                "bank_name":req.body.bank_name,
+                "date":req.body.date
+            }
+        },(err,result) => {
+            if(err) throw err;
+            res.send('Order Updated')
+        }
+    )
+})
+
+//deleteOrder
+app.delete('/deleteOrder/:id',(req,res) => {
+    let _id = mongo.ObjectId(req.params.id);
+    db.collection('order').remove({_id},(err,result) => {
+        if(err) throw err;
+        res.send('Order Deleted')
+    })
+})
+
 //connection with db
 MongoClient.connect(MongoUrl, (err, client)=>{
   if (err) console.log('error while connection');
