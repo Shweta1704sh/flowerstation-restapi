@@ -8,10 +8,14 @@ const { response } = require('express');
 let MongoClient = mongo.MongoClient;
 let MongoUrl =process.env.LiveMongo;
 let db;
+let cors = require('cors')
 let bodyparser=require('body-parser');
 const bodyParser = require('body-parser');
+
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use(cors())
+
 
 app.get('/',(req,res)=>{
     res.send('hii from express')
