@@ -1,83 +1,61 @@
->Live api
-https://flower-restapi.onrender.com
-
->live api with routes
-
-User Details
-https://flower-restapi.onrender.com/user
-
-Products Details
-https://flower-restapi.onrender.com/ProductDetails
-
-Product WRT Product Category
-https://flower-restapi.onrender.com/ProductDetails/?CategoryId=2
-
-Category Detail
-https://flower-restapi.onrender.com/category
-
-Order Details
-https://flower-restapi.onrender.com/OrderDetails
-
-Payment Details
-https://flower-restapi.onrender.com/PaymentDetails
-
-
-Deliver details
-https://flower-restapi.onrender.com/DeliveryDetails
-
-Local APi
-
 >List of products
 http://localhost:9800/ProductDetails
-
-
->List of products wrt product category
-http://localhost:9800/ProductDetails/?CategoryId=2
 
 >Details of category
 http://localhost:9800/category
 
+>List of products wrt product category
+http://localhost:9800/ProductDetails/?CategoryId=14
+
+>Details of product wrt product id , cost
+http://localhost:9800/filters/1?hcost=500&lcost=100
 
 >List of users
 http://localhost:9800/user
 
-
 >Order Details
 http://localhost:9800/OrderDetails
 
->order Details wrt user id
-http://localhost:9800/orders?user_id-2
+>Order Details wrt UserId
+http://localhost:9800/OrderDetails?UserId=2
+
+>Sort on basis of cost
+http://localhost:9800/filter/3
+
+>update order
+http://localhost:9800/updateorder/6
+body-
+{
+"status":"success",
+"bank_name":"HDFC"
+}
+
+>Place Order(POST)
+http://localhost:9800/placeOrder
+body-
+{
+"o_id": 6,
+"date_of_order": "19/10/2022",
+"time_of_order": "01:00PM",
+"place_of_delivery": "Noida",
+"City_of_delivery": "Uttar Pradesh",
+"Country_of_delivery": "India",
+"p_id": 6,
+"Quantity": 1,
+"product_price":1699,
+"user":[
+     {
+"user_name": "Anita Sharma",
+"phone_no": "9911554466"
+}
+]
+}
 
 >Payment details
 http://localhost:9800/PaymentDetails
 
-
 >Deliver details
 http://localhost:9800/DeliveryDetails
 
->delete order
-http://localhost:9800/deleteOrder/637e10cbcb7768bd03f40476
-
->place Orders
-http://localhost:9800/placeOrder
-body 
-{
-    "o_id":6,
-    "date_of_order":"21/10/2022",
-    "time_of_order":"01:00PM",
-    "place_of_delivery":"Shahdara",
-    "City_of_delivery":"Delhi",
-    "Country_of_delivery":"India",
-    "product":
-    {
-        "p_id":2
-    },
-    "Quantity":1,
-    "product_price":"Rs. 824/-",
-    "user":
-    {
-        "user_id" : 2,
-        "user_name" : "Smriti Verma",
-        "phone_no" : "9911586290"
-    }
-}
+>Delete order
+http://localhost:9800/deleteOrder/638f37c987a2bdc1f68a6ba4
