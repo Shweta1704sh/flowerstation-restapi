@@ -28,12 +28,52 @@ app.get('/user',(req,res)=>{
     })
 })
 
+//Cake Detail
+app.get('/cake',(req,res)=>{
+  db.collection('cake').find().toArray((err, result)=>{
+      if (err) throw err;
+      res.send(result)
+  })
+})
+
+//Flower Detail
+app.get('/flower',(req,res)=>{
+  db.collection('flower').find().toArray((err, result)=>{
+      if (err) throw err;
+      res.send(result)
+  })
+})
+
+//Plant Detail
+app.get('/plant',(req,res)=>{
+  db.collection('plant').find().toArray((err, result)=>{
+      if (err) throw err;
+      res.send(result)
+  })
+})
+
+//chocolate Detail
+app.get('/chocolate',(req,res)=>{
+  db.collection('Chocolate').find().toArray((err, result)=>{
+      if (err) throw err;
+      res.send(result)
+  })
+})
+
 //category Detail
 app.get('/category',(req,res)=>{
     db.collection('category').find().toArray((err, result)=>{
         if (err) throw err;
         res.send(result)
     })
+})
+
+//Cake Detail
+app.get('/cake',(req,res)=>{
+  db.collection('cake').find().toArray((err, result)=>{
+      if (err) throw err;
+      res.send(result)
+  })
 })
 
 
