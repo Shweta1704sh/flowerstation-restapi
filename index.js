@@ -144,7 +144,7 @@ app.get('/OrderDetails',(req,res)=>{
     else{
       query={}
     }
-  db.collection('order').find(query).toArray((err, result)=>{
+  db.collection('orders').find(query).toArray((err, result)=>{
   if (err) throw err;
     res.send(result)
   })
