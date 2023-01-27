@@ -205,8 +205,6 @@ app.post('/pro',(req,res) => {
           if(err) throw err;
           res.send(result)
       })
-  }else{
-      res.send('Invalid Input')
   }
   
 })
